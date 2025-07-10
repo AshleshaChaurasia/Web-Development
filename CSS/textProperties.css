@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: double underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2{
+    text-decoration: wavy red line-through;
+    font-size: 30px;
+}
+p{
+    line-height: 2;
+    letter-spacing: normal;
+}
+a{
+    font-weight: 600;
+    text-decoration: none;
+}
