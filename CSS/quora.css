@@ -17,3 +17,50 @@ h3,h1{
 #myId p{
     color: green;
 }
+/* Descendand Selector */
+p a{
+    color: brown;
+}
+nav ul li a{
+    color: cornflowerblue;
+}
+p+h3{
+    text-decoration: underline;
+}
+.upvote + button{
+    background-color: aqua;
+}
+div > input {
+    background-color: goldenrod;
+    color: whitesmoke;
+}
+input[type="text"]{
+    color: red;
+}
+input[type="password"]{
+    color: green;
+}
+input[type]{
+    background-color: aliceblue;
+}
+button:hover{
+    background-color: black;
+    color: white ;
+}
+h3 :hover{
+    text-decoration: overline;
+}
+button:active{
+    background-color: pink;
+}
+p:active{
+    font-weight: bold;
+    color: green;
+}
+input[type="radio"]:checked +label{
+    color: red;
+    font-weight: bold;
+}
+div:nth-of-type(2n+1){
+    background-color: blanchedalmond;
+}
