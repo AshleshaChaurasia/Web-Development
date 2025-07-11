@@ -10,3 +10,10 @@ h3,h1{
 #signup{
     background-color: cadetblue;
 }
+.upvote{
+    background-color: green;
+    color: whitesmoke;
+}
+#myId p{
+    color: green;
+}
