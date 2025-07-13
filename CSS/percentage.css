@@ -1,0 +1,34 @@
+h1{
+    border: 2px solid black;
+    width: 50%;
+}
+#outer{
+    height: 400px;
+    width: 400px;
+    background-color: pink;
+    margin: 50px;
+    font-size: 20px;
+}
+#inner{
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+    margin: 10%;
+    font-size: 1.5em;
+    /* In relation to parent font-size */
+    padding: 2em;
+    /* In relation with own font-size */
+}
+
+section{
+    font-size: 20px;
+}
+/* Em drawback - snowball effect
+div{
+    font-size: 2em;
+    font-size: 0.5em;
+} */
+
+div{
+    font-size: 2rem;
+}
