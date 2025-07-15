@@ -1,5 +1,5 @@
 #container{
-    height: 300px;
+    height: 600px;
     width: 80%;
     background-color: azure;
     margin: 10px auto;
@@ -15,7 +15,10 @@
     /* flex-wrap: nowrap; */
     flex-wrap: wrap;
     /* flex-wrap: wrap-reverse; */
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    align-items: baseline;
 }
 
 h1{
