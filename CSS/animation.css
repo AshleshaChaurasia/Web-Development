@@ -23,7 +23,9 @@
     animation-iteration-count: infinite;
     animation-direction: alternate; */
 
-    animation: widthAnimate 3s ease-in 0s infinite alternate;
+    /* animation: widthAnimate 3s ease-in 0s infinite alternate; */
+
+    animation: colPerAnimate 3s ease-in 0s infinite alternate;
 }
 @keyframes fontAnimation{
     form{font-size:20px;}
@@ -46,5 +48,17 @@
         width: 400px;
         background-color: cadetblue;
         border-radius:15px;
+    }
+}
+
+@keyframes colPerAnimate{
+    0%{
+        background-color: cornflowerblue;
+    }
+    50%{
+        background-color: darkcyan;
+    }
+    100%{
+        background-color: crimson;
     }
 }
