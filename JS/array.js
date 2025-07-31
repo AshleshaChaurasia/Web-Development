@@ -74,3 +74,5 @@ months2.splice(0,1);
 months2.splice(1,0,"june");
 console.log(months2);
 
+let lang = ["c","c++","html","js","python","java","c#","sql"];
+console.log(lang.reverse().indexOf("js"));
