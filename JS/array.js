@@ -49,3 +49,12 @@ console.log(allColors.slice(2));
 console.log(allColors.slice(2,4));
 console.log(allColors.slice(-2));
 console.log(allColors);
+
+// splice
+console.log(allColors);
+allColors.splice(4);
+console.log(allColors);
+allColors.splice(0,1);
+console.log(allColors);
+allColors.splice(1,0,"black","grey");
+console.log(allColors);
