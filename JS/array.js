@@ -41,3 +41,11 @@ console.log(allColors);
 console.log(cars);
 console.log(cars.reverse());
 console.log(cars);
+
+// slice method
+console.log(allColors);
+console.log(allColors.slice());
+console.log(allColors.slice(2));
+console.log(allColors.slice(2,4));
+console.log(allColors.slice(-2));
+console.log(allColors);
