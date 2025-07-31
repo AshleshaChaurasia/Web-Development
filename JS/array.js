@@ -27,3 +27,17 @@ console.log(months.indexOf("april"));
 console.log(cars.includes("bmw"));
 console.log(cars.includes("Bmw"));
 console.log(cars.includes("thar"));
+
+// concat method
+let primary = ["red","yellow","blue"];
+let secondary = ["orange","green","voilet"];
+console.log(primary.concat(secondary));
+console.log(primary);
+console.log(secondary);
+let allColors = primary.concat(secondary);
+console.log(allColors);
+
+// reverse method
+console.log(cars);
+console.log(cars.reverse());
+console.log(cars);
