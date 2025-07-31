@@ -58,3 +58,19 @@ allColors.splice(0,1);
 console.log(allColors);
 allColors.splice(1,0,"black","grey");
 console.log(allColors);
+
+// sort
+console.log(allColors);
+allColors.sort();
+console.log(allColors);
+
+let marks = [25,16,4,49,36,9,100];
+console.log(marks);
+marks.sort();
+console.log(marks);
+
+let months2 = ["january","july","march","august"];
+months2.splice(0,1);
+months2.splice(1,0,"june");
+console.log(months2);
+
