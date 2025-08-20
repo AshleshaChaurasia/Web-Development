@@ -19,12 +19,13 @@ while(true){
         todo.push(task);
         console.log("task added");
     }
-
-    req = prompt("Please enter your request");
-
     else if(req=="delete"){
         let idx = prompt("Please enter the task index you want to delete");
         todo.splice(idx, 1);
         console.log("task deleted");
     }
+    else{
+        console.log("Wrong request");
+    }
+    req = prompt("Please enter your request");
 }
