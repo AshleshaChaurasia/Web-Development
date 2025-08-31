@@ -25,18 +25,32 @@ app.get("/",(req, res) => {
     res.send("You contacted root path");
 });
 
-app.get("/apple", (req, res)=> {
-    res.send("You contacted apple path");
-});
-
-app.get("/orange",(req,res)=>{
-    res.send("You contacted orange path");
-});
-
-// app.get( '*' , (req, res) => {
-//     res.send("This path does not exist");
+// app.get("/apple", (req, res)=> {
+//     res.send("You contacted apple path");
 // });
 
-app.post("/",(req, res) => {
-    res.send("You sent a post request to root path");
+// app.get("/orange",(req,res)=>{
+//     res.send("You contacted orange path");
+// });
+
+// // app.get( '*' , (req, res) => {
+// //     res.send("This path does not exist");
+// // });
+
+// app.post("/",(req, res) => {
+//     res.send("You sent a post request to root path");
+// });
+
+// app.get("/:username", (req,res) => {
+//     let {username} = req.params;
+//     console.dir(req.params);
+//     res.send(`This account belongs to ${username}`);
+// });
+
+app.get("/:username/:id", (req,res) => {
+    let {username,id} = req.params;
+    console.dir(req.params);
+    // res.send(`This account belongs to ${username} and id is ${id}`);
+    let htmlStr = `<h1>This account belongs to ${username} and id is ${id}</h1>`;
+    res.send(htmlStr);
 });
