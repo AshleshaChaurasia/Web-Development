@@ -54,3 +54,11 @@ app.get("/:username/:id", (req,res) => {
     let htmlStr = `<h1>This account belongs to ${username} and id is ${id}</h1>`;
     res.send(htmlStr);
 });
+
+app.get("/search",(req,res) => {
+    let {q} = req.query;
+    if(!q){
+        res.send("Nothing searched");
+    }
+    res.send(`These are the results for query : ${q}`);
+});
