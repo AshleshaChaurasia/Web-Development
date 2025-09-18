@@ -20,7 +20,7 @@ const bookSchema = mongoose.Schema({
     },
     price:{
         type:Number,
-        min: 1,
+        min: [1,"Price is too low"],
     },
     discount:{
         type: Number,
@@ -35,12 +35,16 @@ const bookSchema = mongoose.Schema({
 
 const Book = mongoose.model("Book", bookSchema);
 
-let book1 = new Book({
-    title:"Room no 105",
-    author: "Someone",
-    price: 650,
-    genre: ["romance","love","suspense"],
-    category:"fiction",
-});
+Book.findByIdAndUpdate("68cc08e0b2362ae85d617667",{price:-50},{runValidators:true})
+    .then(res => {console.log(res);})
+    .catch(err =>{console.log(err.errors.price.properties.message);});
 
-book1.save().then((res)=>{console.log(res);}).catch((err)=>{console.log(err);});
+// let book1 = new Book({
+//     title:"Room no 105",
+//     author: "Someone",
+//     price: 650,
+//     genre: ["romance","love","suspense"],
+//     category:"fiction",
+// });
+
+// book1.save().then((res)=>{console.log(res);}).catch((err)=>{console.log(err);});
