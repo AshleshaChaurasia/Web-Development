@@ -18,6 +18,8 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 // const Employee = mongoose.model("Employee", userSchema);
 
+//INSERT ONE
+
 // let user1 = new User({
 //     name: "Ashlesha",
 //     email:"ash@yahoo.in",
@@ -33,8 +35,26 @@ const User = mongoose.model("User", userSchema);
 // user1.save();
 // user2.save().then((res)=>{console.log(res)}).catch(err=>{console.log(err)});
 
-User.insertMany([
-    {name:"Manju", email:"manju@gmail.com", age:54},
-    {name:"Sanjay",email:"sanju5@yahoo.in",age:55},
-    {name:"Babulal",email:"babu123@gmail.com",age:69}
-]).then(res=>{console.log(res)});
+//INSERT MANY
+
+// User.insertMany([
+//     {name:"Manju", email:"manju@gmail.com", age:54},
+//     {name:"Sanjay",email:"sanju5@yahoo.in",age:55},
+//     {name:"Babulal",email:"babu123@gmail.com",age:69}
+// ]).then(res=>{console.log(res)});
+
+//FIND
+
+// User.find({}).then(res=>{console.log(res);});
+
+// User.find({age: {$gt: 50}}).then(data=>{console.log(data[0].name)}).catch(err=>{console.log(err);});
+
+// User.findOne({age: {$gt: 50}}).then(res=>{console.log(res);}).catch(err=>{console.log(err);});
+
+// User.findById("68cbbc3737a418620b032afd").then(res=>{console.log(res);}).catch(err=>{console.log(err);});
+
+//UPDATE ONE
+
+User.updateOne({name: "Sanjay"}, {age: 57}).then((res)=>{console.log(res);}).catch((err)=>{console.log(err);});
+
+User.updateMany({age: {$gt: 50}},{age:22}).then(res=>{console.log(res);}).catch(err=>{console.log(err);});
