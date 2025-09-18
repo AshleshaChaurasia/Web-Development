@@ -20,14 +20,27 @@ const bookSchema = mongoose.Schema({
     },
     price:{
         type:Number,
+        min: 1,
+    },
+    discount:{
+        type: Number,
+        default: 0,
+    },
+    genre:[String],
+    category:{
+        type: String,
+        enum: ["fiction","non-fiction"],
     },
 });
 
 const Book = mongoose.model("Book", bookSchema);
 
 let book1 = new Book({
-    title:"Mathematics Class XII",
-    author: "R.D.Sharma",
-    price: 1200,
+    title:"Room no 105",
+    author: "Someone",
+    price: 650,
+    genre: ["romance","love","suspense"],
+    category:"fiction",
 });
+
 book1.save().then((res)=>{console.log(res);}).catch((err)=>{console.log(err);});
