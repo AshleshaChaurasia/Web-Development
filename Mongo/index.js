@@ -53,8 +53,22 @@ const User = mongoose.model("User", userSchema);
 
 // User.findById("68cbbc3737a418620b032afd").then(res=>{console.log(res);}).catch(err=>{console.log(err);});
 
-//UPDATE ONE
+//UPDATE
 
-User.updateOne({name: "Sanjay"}, {age: 57}).then((res)=>{console.log(res);}).catch((err)=>{console.log(err);});
+// User.updateOne({name: "Sanjay"}, {age: 57}).then((res)=>{console.log(res);}).catch((err)=>{console.log(err);});
 
-User.updateMany({age: {$gt: 50}},{age:22}).then(res=>{console.log(res);}).catch(err=>{console.log(err);});
+// User.updateMany({age: {$gt: 50}},{age:22}).then(res=>{console.log(res);}).catch(err=>{console.log(err);});
+
+// User.findOneAndUpdate({name:"Manju"},{age:25},{new: true}).then(res=>{console.log(res);}).catch(err=>{console.log(err);});
+
+// User.findByIdAndUpdate("68cbbc3737a418620b032afe",{age:25},{new: true}).then((res)=>{console.log(res);}).catch((err)=>{console.log(err)});
+
+//DELETE
+
+// User.deleteOne({name:"Gaurav"}).then((res)=>{console.log(res);}).catch((err)=>{console.log(err)});
+
+// User.deleteMany({age:22 }).then((res)=>{console.log(res);}).catch((err)=>{console.log(err)});
+
+// User.findByIdAndDelete("68cbbc3737a418620b032afd").then((res)=>{console.log(res);}).catch((err)=>{console.log(err)});
+
+User.findOneAndDelete({name: "Manju"}).then((res)=>{console.log(res);}).catch((err)=>{console.log(err)});
